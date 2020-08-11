@@ -256,6 +256,7 @@ Napi::Value MethodClose(const Napi::CallbackInfo &info)
   Napi::Env env = info.Env();
   // printf("[kinect_azure.cc] MethodClose\n");
   k4a_device_close(g_device);
+  g_device = nullptr;
   bool returnValue = (g_device == nullptr) ? true : false;
   is_open = returnValue;
   return Napi::Boolean::New(env, returnValue);
