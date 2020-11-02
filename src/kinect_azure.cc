@@ -849,7 +849,7 @@ Napi::Value MethodStartListening(const Napi::CallbackInfo &info)
             jsFrame.depthImageFrame.stride_bytes = k4a_image_get_stride_bytes(depth_image);
             jsFrame.depthImageFrame.image_data = new uint8_t[jsFrame.depthImageFrame.image_length];
             jsFrame.depthImageFrame.device_timestamp = k4a_image_get_device_timestamp_usec(depth_image);
-          jsFrame.depthImageFrame.system_timestamp = k4a_image_get_system_timestamp_nsec(depth_image);
+            jsFrame.depthImageFrame.system_timestamp = k4a_image_get_system_timestamp_nsec(depth_image);
           }
         }
         // capture the IR image
